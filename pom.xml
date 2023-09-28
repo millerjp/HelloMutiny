@@ -10,6 +10,11 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.release>17</maven.compiler.release>
+		<mutiny.version>2.5.1</mutiny.version>
+		<slf4j-api.version>2.0.9</slf4j-api.version>
+		<guava.version>32.1.2-jre</guava.version>
+		<logback-classic.version>1.4.11</logback-classic.version>
+		<junit-jupiter-engine.version>5.10.0</junit-jupiter-engine.version>
 	</properties>
 
 	<build>
@@ -32,20 +37,26 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>io.smallrye.reactive</groupId>
+			<artifactId>mutiny</artifactId>
+			<version>${mutiny.version}</version>
+		</dependency>
+
+		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<version>2.0.9</version>
+			<version>${slf4j-api.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
-			<version>32.1.2-jre</version>
+			<version>${guava.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
-			<version>1.4.11</version>
+			<version>${logback-classic.version}</version>
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
